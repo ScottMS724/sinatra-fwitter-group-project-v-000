@@ -312,7 +312,7 @@ describe ApplicationController do
         expect(page.body).to include(tweet.content)
       end
 
-      xit 'does not let a user edit a tweet they did not create' do
+      it 'does not let a user edit a tweet they did not create' do
         user1 = User.create(:username => "becky567", :email => "starz@aol.com", :password => "kittens")
         tweet1 = Tweet.create(:content => "tweeting!", :user_id => user1.id)
 
